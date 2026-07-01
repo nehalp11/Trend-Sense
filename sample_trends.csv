@@ -1,0 +1,11 @@
+keyword,google_score,reddit_score,pinterest_score,final_score,tier,predicted_mainstream_weeks
+phulkari jacket,0.92,0.88,0.75,0.87,Viral,2
+mirror work dupatta,0.85,0.72,0.60,0.75,Viral,2
+handloom saree,0.78,0.70,0.65,0.72,Emerging,4
+indo western blazer,0.70,0.65,0.58,0.65,Emerging,4
+bandhani dress,0.65,0.72,0.60,0.66,Emerging,4
+ethnic joggers,0.55,0.60,0.45,0.54,Emerging,4
+boho kurta,0.45,0.68,0.55,0.56,Emerging,4
+tie-dye dupatta,0.40,0.50,0.42,0.44,Early Signal,8
+block print co-ord,0.30,0.40,0.35,0.34,Early Signal,8
+kalamkari fusion,0.20,0.25,0.18,0.21,Watching,12

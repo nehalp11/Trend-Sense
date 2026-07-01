@@ -1,8 +1,10 @@
 <h1 align="center">🔥 TrendSense</h1>
+
 <p align="center">
   <b>Emerging Indian Fashion Trend Detection Using RAR on BERT</b><br>
   <i>Predicting fashion micro-trends 6–8 weeks before mainstream platforms</i>
 </p>
+
 <p align="center">
   <img src="https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white"/>
   <img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=flat&logo=pytorch&logoColor=white"/>
@@ -11,12 +13,19 @@
   <img src="https://img.shields.io/badge/Streamlit-FF4B4B?style=flat&logo=streamlit&logoColor=white"/>
   <img src="https://img.shields.io/badge/Status-Active-green?style=flat"/>
 </p>
+
 ---
-📌 What is TrendSense?
-TrendSense is an AI-powered fashion trend detection system that identifies emerging Indian fashion micro-trends 6–8 weeks before they appear on mainstream platforms like Instagram and Pinterest.
-It fuses signals from Google Trends, Reddit, and Pinterest and uses a novel NLP technique called Recency Attention Reweighting (RAR) on top of BERT to separate genuine emerging trends from historical references — drastically reducing false trend alerts.
+
+## 📌 What is TrendSense?
+
+TrendSense is an AI-powered fashion trend detection system that identifies **emerging Indian fashion micro-trends 6–8 weeks before they appear on mainstream platforms** like Instagram and Pinterest.
+
+It fuses signals from **Google Trends, Reddit, and Pinterest** and uses a novel NLP technique called **Recency Attention Reweighting (RAR)** on top of BERT to separate genuine emerging trends from historical references — drastically reducing false trend alerts.
+
 ---
-🧠 How It Works
+
+## 🧠 How It Works
+
 ```
 📥 Data Sources
 ├── Google Trends   → search volume signals (pytrends)
@@ -53,27 +62,37 @@ It fuses signals from Google Trends, Reddit, and Pinterest and uses a novel NLP 
 🌐 Streamlit Dashboard
 └── Visual trend report with scores and timeline
 ```
+
 ---
-🚀 Key Features
-6–8 week early detection — spots trends before they go mainstream
-RAR-BERT — novel attention reweighting for temporal trend separation
-Multi-source fusion — combines text + search + visual signals
-Indian fashion focused — trained and tuned for Indian fashion context
-Real-time dashboard — interactive Streamlit UI for trend exploration
-DBSCAN clustering — groups related micro-trends automatically
+
+## 🚀 Key Features
+
+- **6–8 week early detection** — spots trends before they go mainstream
+- **RAR-BERT** — novel attention reweighting for temporal trend separation
+- **Multi-source fusion** — combines text + search + visual signals
+- **Indian fashion focused** — trained and tuned for Indian fashion context
+- **Real-time dashboard** — interactive Streamlit UI for trend exploration
+- **DBSCAN clustering** — groups related micro-trends automatically
+
 ---
-🛠️ Tech Stack
-Component	Technology
-Language	Python 3.10+
-NLP Model	BERT (bert-base-uncased) + RAR modification
-Vision Model	CLIP (ViT-B/32)
-Clustering	DBSCAN (scikit-learn)
-Data Sources	Google Trends (pytrends), Reddit (PRAW)
-Frontend	Streamlit
-Deep Learning	PyTorch
-Data Processing	Pandas, NumPy
+
+## 🛠️ Tech Stack
+
+| Component | Technology |
+|-----------|------------|
+| Language | Python 3.10+ |
+| NLP Model | BERT (bert-base-uncased) + RAR modification |
+| Vision Model | CLIP (ViT-B/32) |
+| Clustering | DBSCAN (scikit-learn) |
+| Data Sources | Google Trends (pytrends), Reddit (PRAW) |
+| Frontend | Streamlit |
+| Deep Learning | PyTorch |
+| Data Processing | Pandas, NumPy |
+
 ---
-📁 Project Structure
+
+## 📁 Project Structure
+
 ```
 TrendSense/
 │
@@ -96,8 +115,11 @@ TrendSense/
 ├── requirements.txt
 └── README.md
 ```
+
 ---
-⚙️ Installation & Setup
+
+## ⚙️ Installation & Setup
+
 ```bash
 # Clone the repository
 git clone https://github.com/nehalp1130/TrendSense.git
@@ -109,8 +131,11 @@ pip install -r requirements.txt
 # Run the Streamlit dashboard
 streamlit run dashboard/app.py
 ```
+
 ---
-📦 Requirements
+
+## 📦 Requirements
+
 ```
 torch
 transformers
@@ -122,14 +147,20 @@ pandas
 numpy
 scikit-learn
 ```
+
 Install all at once:
 ```bash
 pip install -r requirements.txt
 ```
+
 ---
-🔬 Core Innovation — RAR (Recency Attention Reweighting)
-Standard BERT treats all text equally. A post saying "I love how sarees were trending in 2020" gets the same attention as "Sarees are blowing up right now!"
-RAR solves this by modifying BERT's attention formula to down-weight historical references and up-weight present-tense discovery language:
+
+## 🔬 Core Innovation — RAR (Recency Attention Reweighting)
+
+Standard BERT treats all text equally. A post saying *"I love how sarees were trending in 2020"* gets the same attention as *"Sarees are blowing up right now!"*
+
+RAR solves this by **modifying BERT's attention formula** to down-weight historical references and up-weight present-tense discovery language:
+
 ```python
 # Standard BERT attention
 attention = softmax(QK^T / sqrt(d_k)) * V
@@ -138,9 +169,13 @@ attention = softmax(QK^T / sqrt(d_k)) * V
 recency_weight = compute_recency_score(post_timestamp, tense_classifier)
 attention = softmax((QK^T / sqrt(d_k)) * recency_weight) * V
 ```
-This makes TrendSense significantly better at distinguishing genuine emerging trends from nostalgia posts and historical references.
+
+This makes TrendSense significantly better at distinguishing **genuine emerging trends** from nostalgia posts and historical references.
+
 ---
-📊 Weighted Trend Score Formula
+
+## 📊 Weighted Trend Score Formula
+
 ```
 TrendScore = (w1 × GoogleTrends_score)
            + (w2 × Reddit_buzz_score)
@@ -150,27 +185,43 @@ Where:
   w1 + w2 + w3 = 1.0
   Weights tuned for Indian fashion context
 ```
+
 ---
-👥 Team
-Name	Role
-Nehal P	NLP + RAR-BERT design
-Team Member 2	Data collection + scraping
-Team Member 3	CLIP integration
-Team Member 4	Dashboard + deployment
+
+## 👥 Team
+
+| Name | Role |
+|------|------|
+| Nehal P | NLP + RAR-BERT design |
+| Team Member 2 | Data collection + scraping |
+| Team Member 3 | CLIP integration |
+| Team Member 4 | Dashboard + deployment |
+
 ---
-📅 Timeline
-Phase	Duration	Status
-Research & design	Jan 2026	✅ Done
-Data pipeline	Feb 2026	✅ Done
-RAR-BERT implementation	Mar 2026	🔄 In Progress
-CLIP integration	Apr 2026	🔄 In Progress
-Dashboard	May 2026	⏳ Upcoming
-Evaluation & testing	Jun 2026	⏳ Upcoming
+
+## 📅 Timeline
+
+| Phase | Duration | Status |
+|-------|----------|--------|
+| Research & design | Jan 2026 | ✅ Done |
+| Data pipeline | Feb 2026 | ✅ Done |
+| RAR-BERT implementation | Mar 2026 | 🔄 In Progress |
+| CLIP integration | Apr 2026 | 🔄 In Progress |
+| Dashboard | May 2026 | ⏳ Upcoming |
+| Evaluation & testing | Jun 2026 | ⏳ Upcoming |
+
 ---
-🏫 Academic Context
+
+## 🏫 Academic Context
+
 > **Project for:** B.E. Computer Science & Engineering (AI & ML)  
 > **Institution:** Mangalore Institute of Technology & Engineering (MITE)  
 > **Batch:** 2023–2027  
 > **Team size:** 4 members  
 > **Started:** January 2026 — Ongoing
+
 ---
+
+<p align="center">
+  <i>Built with ❤️ at MITE Mangalore</i>
+</p>
